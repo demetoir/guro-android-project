@@ -71,15 +71,16 @@ public class ForecastFragment extends Fragment {
 
         //원본 데이터
         String[] data = {
-                "monday", "tuesday", "wendsday", "thursday", "friday", "saturday", "sunday"
+                "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"
         };
 
         // 어뎁터 생성. 데이터를 같이 넣는다
         List<String> weekForecast = new ArrayList<>(Arrays.asList(data));
+
         mForecast = new ArrayAdapter<>(
                 getActivity(),
-                R.layout.list_item_forecast,
-                R.id.list_item_forecast_text_view,
+                R.layout.my_list_item_forecast,
+                R.id.my_list_item_text_view,
                 weekForecast);
 
         //어뎁더 적용. root 뷰에서 추가할 뷰객체를 찾아 어뎁터를 적용함
@@ -164,9 +165,6 @@ public class ForecastFragment extends Fragment {
                 resultStrs[i] = day + " - " + description + " - " + highAndLow;
             }
 
-            for (String s : resultStrs) {
-                //Log.v(LOG_TAG, "Forecast entry: " + s);
-            }
             return resultStrs;
         }
 
@@ -176,7 +174,7 @@ public class ForecastFragment extends Fragment {
             JSONObject forecast = new JSONObject(forecastJsonStr);
             JSONArray dayList = forecast.getJSONArray("list");
 
-            for(int i =0; i<numDays; i++){
+            for (int i = 0; i < numDays; i++) {
                 JSONObject day = dayList.getJSONObject(i);
                 double speed = day.getDouble("speed");
                 String log = i + ":" + speed;
@@ -185,15 +183,15 @@ public class ForecastFragment extends Fragment {
         }
 
         private void LogAirPressure(String forecastJsonStr, int numDays)
-                throws JSONException{
+                throws JSONException {
 
             JSONObject forecast = new JSONObject(forecastJsonStr);
             JSONArray dayList = forecast.getJSONArray("list");
 
-            for(int i =0; i<numDays; i++){
+            for (int i = 0; i < numDays; i++) {
                 JSONObject day = dayList.getJSONObject(i);
                 double pressure = day.getDouble("pressure");
-                String log = i + ":"+ pressure;
+                String log = i + ":" + pressure;
                 Log.v(LOG_TAG, log);
             }
         }
