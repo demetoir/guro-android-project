@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">GridLayout_calindar</string>
     <string name="action_settings">Settings</string>
+    <string name="fragment_grid_layout_monday">Mon</string>
+    <string name="fragment_grid_layout_tuesday">Tue</string>
+    <string name="fragment_grid_layout_wednesday">Wed</string>
+    <string name="fragment_grid_layout_thursday">Thu</string>
+    <string name="fragment_grid_layout_friday">Fri</string>
+    <string name="fragment_grid_layout_saturday">Sat</string>
+    <string name="fragment_grid_layout_sunday">Sun</string>
 </resources>

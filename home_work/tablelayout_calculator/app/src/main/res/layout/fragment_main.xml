@@ -17,15 +17,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="dddddd" />
+            android:text=""
+            android:id="@+id/text_view"/>
     </LinearLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.9"
-        android:weightSum="5"
-        >
+        android:weightSum="5">
 
 
         <!-- ce,c,back,/ -->
@@ -33,30 +34,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:weightSum="4"
-            >
-            <Button android:id="@+id/button_ce"
-                android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/button_ce"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="ce"/>
-            <Button android:id="@+id/button_c"
                 android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:layout_weight="1"
-                android:text="c"/>
+                android:text="ce" />
+
+            <Button
+                android:id="@+id/button_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="c" />
+
             <Button
                 android:id="@+id/button_back"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="back"/>
+                android:text="back" />
+
             <Button
                 android:id="@+id/button_divide"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="/"/>
+                android:text="@string/button_divide" />
 
         </TableRow>
 
@@ -65,32 +71,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:weightSum="4"
-            >
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/button_7"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="7"/>
+                android:text="7" />
+
             <Button
                 android:id="@+id/button_8"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="8"/>
+                android:text="8" />
+
             <Button
                 android:id="@+id/button_9"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="9"/>
+                android:text="9" />
+
             <Button
                 android:id="@+id/button_multiple"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="*"/>
+                android:text="*" />
 
         </TableRow>
 
@@ -99,32 +108,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:weightSum="4"
-            >
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/button_4"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="4"/>
+                android:text="4" />
+
             <Button
                 android:id="@+id/button_5"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="5"/>
+                android:text="5" />
+
             <Button
                 android:id="@+id/button_6"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="6"/>
+                android:text="6" />
+
             <Button
                 android:id="@+id/button_minus"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="-"/>
+                android:text="-" />
 
         </TableRow>
 
@@ -133,32 +145,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:weightSum="4"
-            >
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/button_1"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="1"/>
+                android:text="1" />
+
             <Button
                 android:id="@+id/button_2"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="2"/>
+                android:text="2" />
+
             <Button
                 android:id="@+id/button_3"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="7"/>
+                android:text="7" />
+
             <Button
                 android:id="@+id/button_plus"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+"/>
+                android:text="+" />
         </TableRow>
 
         <!-- +-,0,.,= -->
@@ -166,31 +181,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:weightSum="4"
-            >
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/button_plus_minus"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+-"/>
+                android:text="+-" />
+
             <Button
                 android:id="@+id/button_0"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="0"/>
+                android:text="0" />
+
             <Button
                 android:id="@+id/button_dot"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="."/>
-            <Button android:id="@+id/button_equal"
                 android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:layout_weight="1"
-                android:text="="/>
+                android:text="." />
+
+            <Button
+                android:id="@+id/button_equal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="=" />
         </TableRow>
     </TableLayout>
 

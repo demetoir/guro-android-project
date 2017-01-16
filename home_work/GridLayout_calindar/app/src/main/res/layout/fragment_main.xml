@@ -2,267 +2,300 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentTop="true"
     android:layout_alignParentLeft="false"
     android:layout_alignParentStart="true"
-    android:weightSum="10"
+    android:layout_alignParentTop="true"
     android:orientation="vertical"
-    >
+    android:weightSum="10">
     <!--상단-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="5"
-        />
+        android:layout_weight="5" />
 
     <!--하단-->
     <GridLayout
+        android:id="@+id/fragment_grid_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="5"
-
         android:columnCount="7"
         android:shrinkColumns="*"
-        android:useDefaultMargins="false"
-
-        >
+        android:useDefaultMargins="false">
 
         <!--월화수목금토일-->
         <TextView
-            android:layout_gravity="fill"
-            android:text="Sun"
+            android:id="@+id/grid_text_view_sunday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_sunday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Mon"
+            android:id="@+id/grid_text_view_monday"
             android:layout_columnWeight="1"
-            android:gravity="center"/>
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_monday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Tue"
+            android:id="@+id/grid_text_view_Tuesday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_tuesday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Wen"
+            android:id="@+id/grid_text_view_wednesday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_wednesday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Thu"
+            android:id="@+id/grid_text_view_thursday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_thursday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Fri"
+            android:id="@+id/grid_text_view_friday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_friday" />
 
         <TextView
-            android:layout_gravity="fill"
-            android:text="Sta"
+            android:id="@+id/grid_text_view_saturday"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/fragment_grid_layout_saturday" />
 
         <!--날짜-->
         <TextView
-            android:layout_gravity="fill"
-            android:text="1"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="1" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="2"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="2" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="3"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="3" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="4"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="4" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="5"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="5" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="6"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="6" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="7"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="7" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="8"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="8" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="9"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="9" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="10"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="10" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="11"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="11" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="12"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="12" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="13"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="13" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="14"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="14" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="15"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="15" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="16"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="16" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="17"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="17" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="18"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="18" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="19"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="19" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="20"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="20" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="21"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="21" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="22"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="22" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="23"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="23" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="24"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="24" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="25"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="25" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="26"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="26" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="27"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="27" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="28"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="28" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="29"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="29" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="30"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="30" />
+
         <TextView
-            android:layout_gravity="fill"
-            android:text="31"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_rowWeight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="31" />
 
 
     </GridLayout>

@@ -12,7 +12,7 @@ import android.widget.ImageView;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
-
+    boolean pictureMode = false;
     public MainActivityFragment() {
     }
 
@@ -22,10 +22,28 @@ public class MainActivityFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        ImageView imageView = (ImageView) view.findViewById(R.id.happy_frog_image);
-        Drawable drawable  = getResources().getDrawable(R.drawable.happy_frog);
-        imageView.setImageDrawable(drawable);
+        final ImageView imageView = (ImageView) view.findViewById(R.id.happy_frog_image);
+        final Drawable happy_frog  = getResources().getDrawable(R.drawable.happy_frog);
+        final Drawable sad_frog = getResources().getDrawable(R.drawable.sad_frog);
+        imageView.setImageDrawable(happy_frog);
+
+        pictureMode = false;
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pictureMode){
+                    imageView.setImageDrawable(happy_frog);
+                    pictureMode = false;
+                }
+                else{
+                    imageView.setImageDrawable(sad_frog);
+                    pictureMode = true;
+                }
+            }
+        });
+
 
         return view;
     }
+
 }
