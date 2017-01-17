@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quiz_app</string>
+    <string name="action_settings">Settings</string>
+    <string name="quiz">The answer is O</string>
+    <string name="answer_O">O</string>
+    <string name="answer_X">X</string>
+</resources>

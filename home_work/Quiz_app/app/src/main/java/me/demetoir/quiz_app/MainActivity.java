@@ -1,4 +1,4 @@
-package me.demetoir.frame_with_picture;
+package me.demetoir.quiz_app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -8,4 +8,6 @@
     <string name="fragment_grid_layout_friday">Fri</string>
     <string name="fragment_grid_layout_saturday">Sat</string>
     <string name="fragment_grid_layout_sunday">Sun</string>
+    <string name="menu_next_month">next month</string>
+    <string name="title_activity_detail">detailActivity</string>
 </resources>

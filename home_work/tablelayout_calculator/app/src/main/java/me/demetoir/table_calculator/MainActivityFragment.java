@@ -12,22 +12,7 @@ import android.widget.TextView;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment implements View.OnClickListener {
-    final int[] bntIdList = {
-            R.id.button_0,
-            R.id.button_1,
-            R.id.button_2,
-            R.id.button_3,
-            R.id.button_4,
-            R.id.button_5,
-            R.id.button_6,
-            R.id.button_7,
-            R.id.button_8,
-            R.id.button_9,
-            R.id.button_plus,
-            R.id.button_minus,
-            R.id.button_multiple,
-            R.id.button_divide,
-            R.id.button_equal};
+    //버튼을 저장하고 id는 관리라지마
 
     public MainActivityFragment() {
     }
@@ -36,18 +21,54 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        for (int i = 0; i < bntIdList.length; i++) {
-            Button bnt = (Button) rootView.findViewById(bntIdList[i]);
-            bnt.setOnClickListener(this);
-        }
+        Button bnt = null;
 
+        //숫자
+        bnt = (Button) rootView.findViewById(R.id.button_0);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_1);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_2);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_3);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_4);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_5);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_6);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_7);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_8);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_9);
+        bnt.setOnClickListener(this);
+
+        //연산기호
+        bnt = (Button) rootView.findViewById(R.id.button_plus);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_minus);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_multiple);
+        bnt.setOnClickListener(this);
+        bnt = (Button) rootView.findViewById(R.id.button_divide);
+        bnt.setOnClickListener(this);
+
+        //=
+        bnt = (Button) rootView.findViewById(R.id.button_equal);
+        bnt.setOnClickListener(this);
         return rootView;
     }
 
     @Override
     public void onClick(View v) {
+        //add형으로
         TextView textView = (TextView) getView().findViewById(R.id.text_view);
-        String strTextView = (String) textView.getText();
+        //toString 으로
+        //강제형변환은 지양하기
+        //이미 있는 형으로 해야함
+        String strTextView = textView.getText().toString();
         switch (v.getId()) {
             case R.id.button_0:
                 strTextView += "0";

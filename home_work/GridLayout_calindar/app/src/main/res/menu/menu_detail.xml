@@ -1,15 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="me.demetoir.gridlayout_calindar.MainActivity">
+    tools:context="me.demetoir.gridlayout_calindar.detailActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/next_month"
-        android:orderInCategory="100"
-        android:title="@string/menu_next_month"
         app:showAsAction="never" />
 </menu>

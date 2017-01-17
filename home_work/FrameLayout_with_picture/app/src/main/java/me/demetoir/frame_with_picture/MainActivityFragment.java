@@ -12,7 +12,8 @@ import android.widget.ImageView;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
-    boolean pictureMode = false;
+    //숫자로 수정
+    int pictureMode = 0;
     public MainActivityFragment() {
     }
 
@@ -27,17 +28,18 @@ public class MainActivityFragment extends Fragment {
         final Drawable sad_frog = getResources().getDrawable(R.drawable.sad_frog);
         imageView.setImageDrawable(happy_frog);
 
-        pictureMode = false;
+        pictureMode = 0;
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(pictureMode){
+                if(pictureMode == 0){
                     imageView.setImageDrawable(happy_frog);
-                    pictureMode = false;
+                    pictureMode = 1;
                 }
-                else{
+                else if(pictureMode == 1){
                     imageView.setImageDrawable(sad_frog);
-                    pictureMode = true;
+                    pictureMode = 0;
                 }
             }
         });
