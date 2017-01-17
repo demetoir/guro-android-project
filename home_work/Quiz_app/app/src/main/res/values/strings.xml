@@ -4,4 +4,8 @@
     <string name="quiz">The answer is O</string>
     <string name="answer_O">O</string>
     <string name="answer_X">X</string>
+    <string name="button_correct">correct</string>
+    <string name="button_wrong">wrong</string>
+    <string name="button_prev_quiz" translatable="true">prev</string>
+    <string name="button_next_quiz" translatable="true">next</string>
 </resources>
