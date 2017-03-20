@@ -1,19 +1,66 @@
 package me.demetoir.myapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements ForecastFragment.Callback {
+    final String LOG_TAG = MainActivity.class.getSimpleName();
+
+    private final static String DETAILFRAGMENT_TAG = "DFTAG";
+    private boolean mTwoPane;
+    private String mLocation;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String location = Utility.getPreferredLocation(this);
+
+        if (location != null && !location.equals(mLocation)) {
+            ForecastFragment fragment = (ForecastFragment) getSupportFragmentManager()
+                    .findFragmentById(R.id.fragment_forecast);
+
+            if (fragment != null) {
+                fragment.onLocationChanged();
+            }
+            mLocation = location;
+        }
+
+        DetailFragment detailFragment = (DetailFragment) getSupportFragmentManager().findFragmentByTag(DETAILFRAGMENT_TAG);
+        if (detailFragment != null) {
+            detailFragment.onLocationChanged(location);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        if (findViewById(R.id.weather_detail_container) != null) {
+            mTwoPane = true;
+
+            if (savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.weather_detail_container, new DetailFragment(), DETAILFRAGMENT_TAG)
+                        .commit();
+            }
+        } else {
+            mTwoPane = false;
+            getSupportActionBar().setElevation(0f);
+        }
+
+        ForecastFragment forecastFragment = ((ForecastFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_forecast));
+
+        forecastFragment.setUseTodayLayout(!mTwoPane);
 
     }
 
@@ -33,9 +80,55 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        } else if (id == R.id.action_map) {
+            OpenPreferredLocationInMap();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void OpenPreferredLocationInMap() {
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+
+        String location = Utility.getPreferredLocation(this);
+
+        Uri geoLocation = Uri.parse("geo:0,0?")
+                .buildUpon()
+                .appendQueryParameter("q", location)
+                .build();
+        Log.v(LOG_TAG, geoLocation.toString());
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d(LOG_TAG, "Couldn't call" + location + ", no receiving apps installed!");
+        }
+    }
+
+    @Override
+    public void onItemSelected(Uri contentUri) {
+        if (mTwoPane) {
+            Bundle args = new Bundle();
+            args.putParcelable(DetailFragment.DETAIL_URI, contentUri);
+
+            DetailFragment fragment = new DetailFragment();
+            fragment.setArguments(args);
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.weather_detail_container, fragment, DETAILFRAGMENT_TAG)
+                    .commit();
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class)
+                    .setData(contentUri);
+            startActivity(intent);
+        }
+    }
+
 }

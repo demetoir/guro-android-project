@@ -2,10 +2,21 @@
     <string name="app_name">Quiz_app</string>
     <string name="action_settings">Settings</string>
     <string name="quiz">The answer is O</string>
-    <string name="answer_O">O</string>
-    <string name="answer_X">X</string>
+    <string name="answer_true">O</string>
+    <string name="answer_false">X</string>
     <string name="button_correct">correct</string>
     <string name="button_wrong">wrong</string>
-    <string name="button_prev_quiz" translatable="true">prev</string>
-    <string name="button_next_quiz" translatable="true">next</string>
+    <string name="button_prev_quiz">prev</string>
+    <string name="button_next_quiz">next</string>
+    <string name="quiz_text1">quiz 1</string>
+    <string name="quiz_text2">quiz 2</string>
+    <string name="quiz_text3">quiz 3</string>
+    <string name="quiz_text4">quiz 4</string>
+    <string name="quiz_text5">quiz 5</string>
+    <string name="quiz_text6">quiz 6</string>
+    <string name="quiz_text7">quiz 7</string>
+    <string name="quiz_text8">quiz 8</string>
+    <string name="quiz_text9">quiz 9</string>
+    <string name="quiz_text10">quiz 10</string>
+    <string name="title_activity_grade">gradeActivity</string>
 </resources>

@@ -1,10 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="me.demetoir.table_calculator.MainActivity">
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="me.demetoir.table_calculator.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_pi"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="@string/action_pi"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_sin"
+        android:orderInCategory="100"
+        android:title="@string/action_sin"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_cos"
+        android:orderInCategory="100"
+        android:title="@string/action_cos"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_tan"
+        android:orderInCategory="100"
+        android:title="@string/action_tan"
+        app:showAsAction="never"/>
+
 </menu>

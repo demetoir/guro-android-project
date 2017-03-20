@@ -1,27 +1,30 @@
 package me.demetoir.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 public class DetailActivity extends AppCompatActivity {
+    final private String LOG_TAG = DetailActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         if (savedInstanceState == null) {
+            Bundle arguments = new Bundle();
+            arguments.putParcelable(DetailFragment.DETAIL_URI, getIntent().getData());
+
+            DetailFragment fragment = new DetailFragment();
+            fragment.setArguments(arguments);
+
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.weather_detail_container, fragment)
                     .commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -34,24 +37,11 @@ public class DetailActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
-            return rootView;
-        }
     }
 
 }

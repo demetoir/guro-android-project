@@ -26,9 +26,9 @@
         android:id="@+id/fragment_quiz_answer_O"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="@string/answer_O"
+        android:layout_alignParentBottom="true"
+        android:text="@string/answer_true"
         android:textSize="80sp" />
 
     <Button
@@ -37,23 +37,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/answer_X"
+        android:text="@string/answer_false"
         android:textSize="80sp" />
 
     <Button
         android:id="@+id/fragment_button_prev_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
         android:text="@string/button_prev_quiz" />
 
     <Button
         android:id="@+id/fragment_button_next_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
         android:text="@string/button_next_quiz" />
 
 
