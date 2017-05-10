@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Multimedia-system-project-3d-sound-simulator</string>
+
+    <!--button title-->
+    <string name="moveCounterClockWiseButtonTest">ccw turn</string>
+    <string name="moveClockWisebuttonTest">cw turn</string>
+    <string name="playButtonText">play</string>
+
+</resources>
